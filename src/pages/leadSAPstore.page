@@ -1,0 +1,19 @@
+<apex:page controller="leadSAPstoreController" >
+    <apex:pageBlock title="SAP Store Lead Listing" >
+        <apex:PageBlockTable value="{!Summaries}" var="leads">
+            <apex:column >
+                <apex:facet name="header">Lead Name</apex:facet>
+                <apex:outputText value="{!leads.Name__c}"/>
+            </apex:column>  
+            <apex:column >
+                <apex:facet name="header">OwnerID</apex:facet>
+                <apex:outputText value="{!leads.OwnerId__c}"/>
+            </apex:column>  
+            
+            <apex:column >
+                <apex:facet name="header">External ID</apex:facet>
+                <apex:outputLink value="/{!leads.ID}">{!leads.ExternalID}</apex:outputLink>
+            </apex:column>
+        </apex:PageBlockTable>
+    </apex:pageBlock>
+</apex:page>
