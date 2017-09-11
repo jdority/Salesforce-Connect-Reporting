@@ -8,8 +8,7 @@
             <apex:column >
                 <apex:facet name="header">OwnerID</apex:facet>
                 <apex:outputText value="{!leads.OwnerId__c}"/>
-            </apex:column>  
-            
+            </apex:column> 
             <apex:column >
                 <apex:facet name="header">External ID</apex:facet>
                 <apex:outputLink value="/{!leads.ID}">{!leads.ExternalID}</apex:outputLink>
